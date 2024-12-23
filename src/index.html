@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Next</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="dark:bg-gray-900">
+    <header class="bg-blue-600 py-4 px-4 md:px-20 h-auto dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto">
+
+            <div class="flex justify-between items-center pt-5 pb-14">
+                <h1 class="text-3xl text-white mr-auto font-bold">Tech Next</h1>
+                <button class="md:hidden text-white mr-4" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex text-white font-medium text-base gap-3">
+                    <a href="#" class="hover:text-gray-200">Menu</a>
+                    <a href="#" class="hover:text-gray-200">Home</a>
+                    <a href="#" class="hover:text-gray-200">About</a>
+                    <a href="#" class="hover:text-gray-200">Services</a>
+                    <a href="#" class="hover:text-gray-200">Contact</a>
+                </nav>
+
+                <!-- Cart and Theme Buttons -->
+                <div class="flex items-center">
+                    <button class="ml-4" id="toggleDarkMode">
+                        <i class="fa-solid fa-moon text-white text-2xl" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu"
+                class="hidden md:hidden flex-col text-white font-medium text-base gap-4 pb-4 absolute left-0 right-0 bg-blue-600 dark:bg-gray-800 px-4 z-10">
+                <a href="#" class="hover:text-gray-200">Menu</a>
+                <a href="#" class="hover:text-gray-200">Home</a>
+                <a href="#" class="hover:text-gray-200">About</a>
+                <a href="#" class="hover:text-gray-200">Services</a>
+                <a href="#" class="hover:text-gray-200">Contact</a>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h2 class="text-white text-4xl font-bold mb-4 font-serif">Welcome to Our Website</h2>
+                    <p class="text-white/90 text-xl">Discover the best services and solutions for your business</p>
+                    <a class="mt-10 inline-block bg-white dark:bg-gray-700 dark:text-white px-4 py-2 rounded-full font-semibold text-blue-500 hover:bg-slate-200 dark:hover:bg-gray-600 hover:shadow-lg hover:text-red-500 transition-all duration-300"
+                        href="#product">
+                        Start Shopping
+                    </a>
+                </div>
+                <img src="undraw_ai-voice-interface_7uqq.svg" alt="AI Voice Interface" class="mb-8 mt-8 md:mt-0"
+                    width="400" height="300">
+            </div>
+        </div>
+    </header>
+
+    <section id="product">
+        <div class="mt-20 flex flex-col items-center mb-10">
+            <h2
+                class="text-3xl text-gray-900 dark:text-white font-bold mb-4 text-center transition-colors duration-300">
+                Our Products</h2>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <!-- Product Cards - Using template for one card, repeat for others -->
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 1</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 2</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 3</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 4</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 5</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-6 animate-in">
+                <img src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                    class="w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                    alt="Preview of a business workspace">
+                <h3 class="text-lg text-gray-900 dark:text-white font-bold mb-3 mt-4">Laptop 6</h3>
+                <div class="flex justify-between items-center pr-4 pb-4">
+                    <h3 class="text-lg text-gray-900 dark:text-white font-bold">Rp. 5.000.000</h3>
+                    <i onclick="openPopup()"
+                        class="fas fa-shopping-cart text-blue-600 dark:text-blue-400 text-2xl cursor-pointer hover:text-blue-800 dark:hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></i>
+                </div>
+            </div>
+            <!-- Repeat the card structure for other products with dark mode classes -->
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section>
+        <div class="flex flex-col items-center mt-20">
+            <h2 class="text-3xl text-gray-900 dark:text-white font-bold mb-20 transition-colors duration-300">Product
+                Reviews
+            </h2>
+        </div>
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+            <!-- Comment Card Template -->
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-8 animate-in">
+                <h4 class="flex items-center mb-6 text-lg font-bold">
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 mr-3 text-2xl text-blue-500 bg-slate-700 dark:bg-gray-900 border-2 border-blue-500 rounded-full">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="flex-1">
+                        <span class="block font-bold dark:text-white">Person A</span>
+                        <p class="text-sm text-gray-400">reply</p>
+                    </div>
+                    <button
+                        class="ml-auto text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 transition-colors duration-200">
+                        <i class="fa-solid fa-share ml-2"></i>
+                    </button>
+                </h4>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <div class="flex items-center gap-2 mt-6">
+                    <div class="flex space-x-1">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="ml-3 font-bold text-gray-700 dark:text-gray-300">5/5</p>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-8 animate-in">
+                <h4 class="flex items-center mb-6 text-lg font-bold">
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 mr-3 text-2xl text-blue-500 bg-slate-700 dark:bg-gray-900 border-2 border-blue-500 rounded-full">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="flex-1">
+                        <span class="block font-bold dark:text-white">Person B</span>
+                        <p class="text-sm text-gray-400">reply</p>
+                    </div>
+                    <button
+                        class="ml-auto text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 transition-colors duration-200">
+                        <i class="fa-solid fa-share ml-2"></i>
+                    </button>
+                </h4>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <div class="flex items-center gap-2 mt-6">
+                    <div class="flex space-x-1">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="ml-3 font-bold text-gray-700 dark:text-gray-300">5/5</p>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-8 animate-in">
+                <h4 class="flex items-center mb-6 text-lg font-bold">
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 mr-3 text-2xl text-blue-500 bg-slate-700 dark:bg-gray-900 border-2 border-blue-500 rounded-full">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="flex-1">
+                        <span class="block font-bold dark:text-white">Person C</span>
+                        <p class="text-sm text-gray-400">reply</p>
+                    </div>
+                    <button
+                        class="ml-auto text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 transition-colors duration-200">
+                        <i class="fa-solid fa-share ml-2"></i>
+                    </button>
+                </h4>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <div class="flex items-center gap-2 mt-6">
+                    <div class="flex space-x-1">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="ml-3 font-bold text-gray-700 dark:text-gray-300">5/5</p>
+                </div>
+            </div>
+            <div
+                class="bg-slate-200 dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 sm:p-8 animate-in">
+                <h4 class="flex items-center mb-6 text-lg font-bold">
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 mr-3 text-2xl text-blue-500 bg-slate-700 dark:bg-gray-900 border-2 border-blue-500 rounded-full">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="flex-1">
+                        <span class="block font-bold dark:text-white">Person D</span>
+                        <p class="text-sm text-gray-400">reply</p>
+                    </div>
+                    <button
+                        class="ml-auto text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 transition-colors duration-200">
+                        <i class="fa-solid fa-share ml-2"></i>
+                    </button>
+                </h4>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+                <div class="flex items-center gap-2 mt-6">
+                    <div class="flex space-x-1">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-regular fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="ml-3 font-bold text-gray-700 dark:text-gray-300">4/5</p>
+                </div>
+            </div>
+
+            <!-- Repeat comment card structure for other comments -->
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 dark:bg-gray-950 py-4 text-gray-300 mt-[100px] transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center flex-col">
+                <p class="text-sm mb-2">
+                    Created by <span class="font-bold text-white">Jaka Perdana</span>
+                </p>
+                <p class="text-sm">
+                    © 2024 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-w-4xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Detail Produk</h3>
+                <button onclick="closePopup()"
+                    class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/2">
+                    <img id="productImage"
+                        src="https://c1.wallpaperflare.com/preview/483/880/1/background-business-computer-connection.jpg"
+                        alt="Product Image" class="w-full h-auto rounded-lg object-cover">
+                </div>
+                <div class="md:w-1/2 flex flex-col">
+                    <h4 id="productName" class="text-lg font-bold text-gray-900 dark:text-white mb-2">Laptop X</h4>
+                    <p id="productPrice" class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4">Rp. 5.000.000
+                    </p>
+                    <div class="text-gray-700 dark:text-gray-300 space-y-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Stok tersedia</span>
+                        </div>
+                        <p class="text-sm">
+                            Laptop gaming premium dengan spesifikasi tinggi. Dilengkapi dengan prosesor terbaru dan
+                            kartu grafis performa tinggi.
+                        </p>
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium mb-2">Jumlah</label>
+                            <div class="flex items-center gap-4">
+                                <button onclick="updateQuantity(-1)"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="quantity" value="1" min="1" max="10"
+                                    class="w-16 text-center border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white py-1"
+                                    style="appearance: none; -webkit-appearance: none; -moz-appearance: textfield;">
+
+                                <button onclick="updateQuantity(1)"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="mt-4">
+                            <label class="block text-sm font-medium mb-2">Total Harga:</label>
+                            <p id="totalPrice" class="text-lg font-bold text-blue-600 dark:text-blue-400">Rp. 5.000.000
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mt-auto pt-6 flex gap-4">
+                        <button onclick="closePopup()"
+                            class="flex-1 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300">
+                            Batal
+                        </button>
+                        <button onclick="confirmPurchase()"
+                            class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Gateway -->
+
+
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+
+        const toggleButton = document.getElementById('toggleDarkMode');
+        const themeIcon = document.getElementById('themeIcon');
+        let isDark = false;
+
+        toggleButton.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            isDark = !isDark;
+            themeIcon.classList.remove(isDark ? 'fa-moon' : 'fa-sun');
+            themeIcon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+        });
+
+        // Modal Product
+        function openPopup() {
+            const modal = document.getElementById('popupModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePopup() {
+            const modal = document.getElementById('popupModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            const newValue = Math.max(1, Math.min(10, currentValue + change));
+            quantityInput.value = newValue;
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const basePrice = 5000000; // Base price in Rupiah
+            const total = basePrice * quantity;
+            document.getElementById('totalPrice').textContent = `Rp. ${total.toLocaleString('id-ID')}`;
+        }
+
+        function confirmPurchase() {
+            const quantity = document.getElementById('quantity').value;
+            const totalPrice = document.getElementById('totalPrice').textContent;
+
+            document.getElementById('confirmQuantity').textContent = quantity;
+            document.getElementById('confirmPrice').textContent = totalPrice;
+
+            document.getElementById('popupModal').classList.add('hidden');
+            document.getElementById('confirmationModal').classList.remove('hidden');
+        }
+
+
+
+        // Add event listener for quantity input
+        document.getElementById('quantity').addEventListener('input', function (e) {
+            let value = parseInt(e.target.value);
+            if (isNaN(value) || value < 1) value = 1;
+            if (value > 10) value = 10;
+            e.target.value = value;
+            updateTotalPrice();
+        });
+
+    </script>
+</body>
+
+</html>
